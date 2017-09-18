@@ -1,5 +1,5 @@
 imports:
-    - { resource: config_dev.yml }
+    - { resource: ../../../app/config/config_dev.yml }
 
 framework:
     test: ~
@@ -18,7 +18,7 @@ swiftmailer:
 liip_functional_test: ~
 
 services:
-    test.deeper_service_mock_2:
-        class: Test\DeeperServiceMock2
+    test.deeper_service_mock_1:
+        class: Test\DeeperServiceMock1
     AppBundle\Service\Middlware:
-        arguments: ['@test.deeper_service_mock_2']
+        arguments: ['@test.deeper_service_mock_1']
